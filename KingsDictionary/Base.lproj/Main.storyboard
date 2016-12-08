@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4hI-nr-ePk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="IWL-Wb-EmB">
+            <objects>
+                <navigationController id="4hI-nr-ePk" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G5V-yx-1N6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f6N-zE-AB6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEB-g3-KP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-476" y="367"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word to search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VYa-19-jHq">
+                                <rect key="frame" x="26" y="123" width="323" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Q1d-Ct-CDl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bO-9T-lRX">
+                                <rect key="frame" x="147" y="188" width="80" height="50"/>
+                                <color key="backgroundColor" red="0.82352941180000006" green="0.21960784310000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="E4D-IG-USp"/>
+                                    <constraint firstAttribute="width" constant="80" id="yTK-9y-Og5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lw1-On-1gn">
+                                <rect key="frame" x="26" y="258" width="323" height="409"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74160876819999999" green="1" blue="0.79548393319999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2bO-9T-lRX" firstAttribute="top" secondItem="VYa-19-jHq" secondAttribute="bottom" constant="15" id="2rX-ik-Ubd"/>
+                            <constraint firstItem="VYa-19-jHq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="CvX-pI-r4h"/>
+                            <constraint firstItem="VYa-19-jHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ktu-QH-oeR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lw1-On-1gn" secondAttribute="bottom" id="TUr-XP-0Hn"/>
+                            <constraint firstItem="Lw1-On-1gn" firstAttribute="width" secondItem="VYa-19-jHq" secondAttribute="width" id="WWH-HP-iev"/>
+                            <constraint firstItem="VYa-19-jHq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ZKL-tM-n92"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VYa-19-jHq" secondAttribute="trailing" constant="10" id="ZRA-Nf-QHz"/>
+                            <constraint firstItem="2bO-9T-lRX" firstAttribute="centerX" secondItem="VYa-19-jHq" secondAttribute="centerX" id="eQJ-82-nTp"/>
+                            <constraint firstItem="Lw1-On-1gn" firstAttribute="top" secondItem="2bO-9T-lRX" secondAttribute="bottom" constant="20" id="v19-VP-1hs"/>
+                            <constraint firstItem="Lw1-On-1gn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zfM-SS-xAh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ktu-QH-oeR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="CwB-BH-cZs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236.5" y="366.5"/>
+        </scene>
+    </scenes>
+</document>
